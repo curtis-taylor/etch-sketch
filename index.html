@@ -4,9 +4,24 @@
         <link rel="stylesheet" href="style.css">
     </header>
     <body>
-        <div> 
-            <h1>ETCH-SKETCH</h1>
+        <div class="bar_container">
+                <h1>ETCH-SKETCH</h1>
+                <button id="submit">SUBMIT</button>
         </div>
+
+        <script type="text/javascript" src="etch.js"></script>
+         <script>
+            const submit_button = document.querySelector('#submit');
+
+            submit_button.addEventListener("click", function(e) {
+            e.preventDefault();
+            //e.stopPropagation();
+            e.stopImmediatePropagation();
+            console.log("roc")
+            // playRound("rock", getComputerChoice());
+        });
+         </script>
+        
         <div class="grid_container">
 
         </div>
