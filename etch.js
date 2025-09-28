@@ -1,5 +1,9 @@
 const container = document.querySelector('.grid_container');
 
-const square = container.createElement('');
-square.setAttribute(".square", "ss");
+const square = container.createElement('div');
+square.setAttribute("id", "square");
 
+
+function test() {
+    
+}
