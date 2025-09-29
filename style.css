@@ -18,10 +18,10 @@
     font-size: medium;
 }
 
-.square {
+#square {
     width: 100px;
     height: 100px;
     background-color: blue;
-    border: 10px;
+    border: 20px;
     border-color: brown;
 }

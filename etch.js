@@ -1,9 +1,10 @@
-const container = document.querySelector('.grid_container');
+const container = document.querySelector('#grid_container');
 
-const square = container.createElement('div');
+const square = document.createElement('div');
 square.setAttribute("id", "square");
 
 
-function test() {
-    
+function square_test() {
+    container.append(square);
+    console.log('square')
 }

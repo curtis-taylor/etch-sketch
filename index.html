@@ -9,7 +9,11 @@
                 <button id="submit">SUBMIT</button>
         </div>
 
-        <script type="text/javascript" src="etch.js"></script>
+       
+        
+        <div id="grid_container"></div>
+
+         <script type="text/javascript" src="etch.js"></script>
          <script>
             const submit_button = document.querySelector('#submit');
 
@@ -17,15 +21,12 @@
             e.preventDefault();
             //e.stopPropagation();
             e.stopImmediatePropagation();
-            console.log("roc")
+            console.log("roc");
+            square_test();
             // playRound("rock", getComputerChoice());
 
             
         });
          </script>
-        
-        <div class="grid_container">
-
-        </div>
     </body>
 </html>
