@@ -1,13 +1,22 @@
-const container = document.querySelector('#grid_container');
+
 
 
 
 
 function square_test() {
-    for (let i = 0; i < 4; i++) {
-        let square = container.createElement('div');
-        square.setAttribute("class", "square");
-        container.appendChild(square);
-        console.log('square')
+
+    const container = document.querySelector('#grid_container');
+   
+    if(container.children.length < 1) {
+    
+
+        for (let i = 0; i < 20; i++) {
+            let square = document.createElement('div');
+            square.setAttribute("class", "square");
+            square.setAttribute("id", i);
+            container.appendChild(square);
+
+            console.log('square')
+        }
     }
 }
