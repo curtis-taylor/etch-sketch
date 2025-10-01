@@ -4,9 +4,10 @@ const container = document.querySelector('#grid_container');
 
 
 function square_test() {
-    let square = document.createElement('div');
-    square.setAttribute("class", "square");
-    container.append(square);
-    container.append(square);
-    console.log('square')
+    for (let i = 0; i < 4; i++) {
+        let square = container.createElement('div');
+        square.setAttribute("class", "square");
+        container.appendChild(square);
+        console.log('square')
+    }
 }
