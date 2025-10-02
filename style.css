@@ -5,7 +5,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    width: 100%;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
 }
 
 .bar_container {
@@ -22,12 +23,15 @@
 }
 
 .square {
-    width: 100px;
-    height: 100px;
+    height: calc(100vw / 16);
     background-color: wheat;
     border: 2px;
     border-color: black;
     border-style: solid;
-    flex: 0 0 20%;
+    flex: 0 0 calc(100vw / 16);
 
+}
+
+.square:hover {
+  background-color:gold;  
 }

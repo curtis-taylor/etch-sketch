@@ -10,7 +10,7 @@ function square_test() {
     if(container.children.length < 1) {
     
 
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < 256; i++) {
             let square = document.createElement('div');
             square.setAttribute("class", "square");
             square.setAttribute("id", i);
