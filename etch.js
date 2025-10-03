@@ -1,8 +1,6 @@
 
 
 
-
-
 function square_test() {
 
     const container = document.querySelector('#grid_container');
@@ -18,5 +16,18 @@ function square_test() {
 
             console.log('square')
         }
+
+        
     }
+
+    let square_locate = document.querySelectorAll('.square').forEach(item => {
+        item.addEventListener('mouseover', e => {
+            e.preventDefault();
+        //e.stopPropagation();
+        e.stopImmediatePropagation();
+        console.log(e);
+        item.setAttribute('style', 'background-color: red;');
+        })
+    })
+
 }

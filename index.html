@@ -16,17 +16,19 @@
          <script type="text/javascript" src="etch.js"></script>
          <script>
             const submit_button = document.querySelector('#submit');
+            
 
             submit_button.addEventListener("click", function(e) {
-            e.preventDefault();
-            //e.stopPropagation();
-            e.stopImmediatePropagation();
-            console.log("roc");
-            square_test();
-            // playRound("rock", getComputerChoice());
-
+                e.preventDefault();
+                //e.stopPropagation();
+                e.stopImmediatePropagation();
+                console.log("roc");
+                square_test();
+                // playRound("rock", getComputerChoice());
             
-        });
+            });
+
+             
          </script>
     </body>
 </html>
