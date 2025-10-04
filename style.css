@@ -28,19 +28,31 @@ body {
 }
 
 #submit {
-    background-color: cornflowerblue;
+    background-color: blue;
     font-size: medium;
+    border-radius: 5px;
+    color: whitesmoke;
+    margin: 20px;
 }
 
 .square {
     height: calc(100% / 16);;
-    background-color: wheat;
+    background-color: white;
     border: 1px solid #999;
     flex: 0 0 calc(100% / 16);
     box-sizing: border-box; /* Include padding/border in the element's total width and height */
 
 }
 
+/*
 .square:hover {
   background-color:gold;  
+} */
+
+.square_container {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 }
