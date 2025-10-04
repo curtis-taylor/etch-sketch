@@ -21,7 +21,8 @@
          <script type="text/javascript" src="etch.js"></script>
          <script>
             const submit_button = document.querySelector('#submit');
-            
+            const slider1 = document.querySelector("#slider_id");
+            const slider_text = document.querySelector("slider_value");
 
             submit_button.addEventListener("click", function(e) {
                 e.preventDefault();
@@ -29,6 +30,17 @@
                 e.stopImmediatePropagation();
                 console.log("roc");
                 square_test();
+                // playRound("rock", getComputerChoice());
+            
+            });
+
+            slider1.addEventListener("input", function(e) {
+                e.preventDefault();
+                //e.stopPropagation();
+                e.stopImmediatePropagation();
+                console.log("slider");
+                slider_text.innerHTML = slider1.value;
+                
                 // playRound("rock", getComputerChoice());
             
             });
