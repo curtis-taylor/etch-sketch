@@ -9,7 +9,7 @@
                 <button id="submit">SUBMIT</button>
                 <div class="slider_container">
                     <input type="range" min="2" max="100" value="16" class="slider" id="slider_id">
-                    <h4 id="slider_value">16</h4>
+                    <label id="slider_value">16</label>
                 </div>
         
         </div>
@@ -22,15 +22,14 @@
          <script>
             const submit_button = document.querySelector('#submit');
             const slider1 = document.querySelector("#slider_id");
-            const slider_text = document.querySelector("slider_value");
+            const slider_text = document.querySelector("#slider_value");
 
             submit_button.addEventListener("click", function(e) {
                 e.preventDefault();
                 //e.stopPropagation();
                 e.stopImmediatePropagation();
                 console.log("roc");
-                square_test();
-                // playRound("rock", getComputerChoice());
+                square_test(parseInt(slider_text.textContent));
             
             });
 
@@ -39,7 +38,7 @@
                 //e.stopPropagation();
                 e.stopImmediatePropagation();
                 console.log("slider");
-                slider_text.innerHTML = slider1.value;
+                slider_text.textContent = slider1.value;
                 
                 // playRound("rock", getComputerChoice());
             
