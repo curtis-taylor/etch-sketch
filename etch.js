@@ -25,10 +25,10 @@ function square_test(square_length) {
             container.appendChild(square);
 
             let computedStyles = window.getComputedStyle(square);
-            console.log('square ' + square_length * square_length);
-            console.log( computedStyles.height);
-            console.log(computedStyles.backgroundColor);
-            console.log(txt)
+           // console.log('square ' + square_length * square_length);
+            console.log("Hi " + computedStyles.height);
+           // console.log(computedStyles.backgroundColor);
+           // console.log(txt)
         }
 
         
@@ -41,14 +41,23 @@ function square_test(square_length) {
         e.stopImmediatePropagation();
         //console.log(e);
         console.log("****");
+        console.log('Mouse is over:', item);
 
-        let computedStyles2 = window.getComputedStyle(item);
-
-        console.log(computedStyles2.height);
-        let txt = "--grid-size: " + square_length + " ;";
+       
+        console.log("&&&&");
+        let txt = "--grid-size: " + square_length + ";";
+        let h_text = "height: calc(%100 / var(" + square_length + "));";
+        let f_text= "flex: 0 0 calc(%100 / var(" + square_length + "));";
         item.setAttribute('style', txt);
+        item.setAttribute('style', h_text);
+        item.setAttribute('style', f_text);
         item.setAttribute('style', 'background-color: red;');
-        })
+        
+         let computedStyles2 = window.getComputedStyle(item);
+
+        console.log("HHHHHH " + computedStyles2.height);
+
+       })
     })
 
 }
