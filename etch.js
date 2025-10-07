@@ -55,8 +55,10 @@ function colouring (square_length, height) {
         console.log("****");
         console.log('Mouse is over:', item);
 
-        item.style.height = `${height}px`;
-        item.style.flex = '0 0 ' + `${height}px` + "px";
+        item.style.height = `${height}`;
+        item.style.flex = '0 0 ' + `${height}`;
+        console.log(`${height}`);
+        console.log('0 0 ' + `${height}`)
         console.log("&&&&");
 
         /*
@@ -73,7 +75,8 @@ function colouring (square_length, height) {
         
          let computedStyles2 = window.getComputedStyle(item);
 
-        console.log("HHHHHH " + computedStyles2.height);
+        console.log("HHHHHH " + computedStyles2.height + " " + item.id);
+      
 
        })
     })

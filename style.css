@@ -22,8 +22,8 @@ body {
 #grid_container {
     display: flex;
     flex-wrap: wrap;
-    width: 1500px; /* Set fixed width */
-    height: 1500px ; /* Set fixed height for square shape */
+    width: 900px; /* Set fixed width */
+    height: 900px ; /* Set fixed height for square shape */
     position: relative; /* Positioning for squared divs */
 }
 
