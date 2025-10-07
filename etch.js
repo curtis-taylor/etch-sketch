@@ -29,10 +29,22 @@ function square_test(square_length) {
             console.log("Hi " + computedStyles.height);
            // console.log(computedStyles.backgroundColor);
            // console.log(txt)
+
+
+            colouring(square_length, computedStyles.height);
+           
         }
 
         
     }
+
+     
+
+    
+
+}
+
+function colouring (square_length, height) {
 
     let square_locate = document.querySelectorAll('.square').forEach(item => {
         item.addEventListener('mouseover', e => {
@@ -43,14 +55,20 @@ function square_test(square_length) {
         console.log("****");
         console.log('Mouse is over:', item);
 
-       
+        item.style.height = `${height}px`;
+        item.style.flex = '0 0 ' + `${height}px` + "px";
         console.log("&&&&");
-        let txt = "--grid-size: " + square_length + ";";
-        let h_text = "height: calc(%100 / var(" + square_length + "));";
-        let f_text= "flex: 0 0 calc(%100 / var(" + square_length + "));";
+
+        /*
+        let txt = "--grid-size: " + square_length + ";"; 
+       let h_text = "height: " + height + " ;";
+       // let f_text= "flex: 0 0 calc(%100 / var(" + square_length + "));";
         item.setAttribute('style', txt);
         item.setAttribute('style', h_text);
-        item.setAttribute('style', f_text);
+       // item.setAttribute('style', h_text);
+       // item.setAttribute('style', f_text);
+                */
+
         item.setAttribute('style', 'background-color: red;');
         
          let computedStyles2 = window.getComputedStyle(item);
