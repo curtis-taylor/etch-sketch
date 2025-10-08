@@ -59,6 +59,7 @@ function colouring (square_length, height) {
         item.style.flex = '0 0 ' + `${height}`;
         console.log(`${height}`);
         console.log('0 0 ' + `${height}`)
+        console.log("LLL " + toString(item.style.height))
         console.log("&&&&");
 
         /*
@@ -75,7 +76,7 @@ function colouring (square_length, height) {
         
          let computedStyles2 = window.getComputedStyle(item);
 
-        console.log("HHHHHH " + computedStyles2.height + " " + item.id);
+        console.log("HHHHHH " + computedStyles2.height + " " + item.id + " " + computedStyles2.flex);
       
 
        })
