@@ -22,8 +22,8 @@ body {
 #grid_container {
     display: flex;
     flex-wrap: wrap;
-    width: 700px; /* Set fixed width */
-    height: 700px ; /* Set fixed height for square shape */
+    width: 800px; /* Set fixed width */
+    height: 800px; /* Set fixed height for square shape */
     position: relative; /* Positioning for squared divs */
 }
 
@@ -64,12 +64,12 @@ body {
 
 } */
 
+
 .square {
     background-color: white; 
     border: 1px solid #999;
-    height: 
 
-}
+} 
 
 /*
 .square:hover {

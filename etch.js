@@ -27,28 +27,30 @@ function square_test(square_length) {
 
             //square.style.setProperty('--grid-size', square_length);
             //square.style.flex = "0 0 calc(100% / square_length)"
+           
             let txt = "--grid-size: " + square_length + ";";
-            square.setAttribute("style", txt);
+
+            let txt2 = "--grid-size: " + square_length + " ;" + "height: " + (100 / square_length)  + "%; " + "flex: 0 0 " + (100 / square_length)  + "%;";
+            
+            square.setAttribute("style", txt2);
             container.appendChild(square);
 
             let computedStyles = window.getComputedStyle(square);
            // console.log('square ' + square_length * square_length);
-            console.log("Hi " + computedStyles.height);
+            console.log("Hi " + txt2);
            // console.log(computedStyles.backgroundColor);
            // console.log(txt)
 
-
-            colouring(square_length, computedStyles.height);
            
         }
 
-        
+        colouring(square_length);
     }
     
 
 }
 
-function colouring (square_length, height) {
+function colouring (square_length) {
 
     const square_locate = document.querySelectorAll('.square').forEach(item => {
     let square_touch = {};
@@ -81,7 +83,7 @@ function colouring (square_length, height) {
             }
         }
 
-        let txt = 'background-color: ' + color_hex + ';' + '--grid-size: ' + square_length + ';' + 'opacity: ' + opacity_num + ";";
+        let txt = 'background-color: ' + color_hex + ';' + '--grid-size: ' + square_length + ';' + 'opacity: ' + opacity_num + ";" + + "height: " + (100 / square_length)  + "%; " + "flex: 0 0 " + (100 / square_length)  + "%;";
 
        // item.setAttribute('style', txt);
 
