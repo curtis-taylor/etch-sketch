@@ -61,7 +61,7 @@ function colouring (square_length, height) {
         e.stopImmediatePropagation();
 
          color_hex = getRandomHexColor();
-         console.log(color_hex);
+        // console.log(color_hex);
         //console.log(e);
 
         //console.log("**** " + `${square_length}`);
@@ -75,7 +75,7 @@ function colouring (square_length, height) {
             if(square_touch[item.id] < 10) {
                 square_touch[item.id] = square_touch[item.id] + 1;
                 opacity_num = square_touch[item.id] / 10;
-                console.log(opacity_num);
+                //console.log(opacity_num);
             } else {
                 color_hex = '#000000'
             }
@@ -89,9 +89,9 @@ function colouring (square_length, height) {
         item.style.flex = '0 0 ' + `${height}`;
         console.log(`${height}`);
         console.log('0 0 ' + `${height}`) */
-        console.log("&&&&");
+        // console.log("&&&&");
 
-        let computedStyles2 = window.getComputedStyle(item);
+       // let computedStyles2 = window.getComputedStyle(item);
 
        
 
@@ -109,7 +109,7 @@ function colouring (square_length, height) {
 
         //console.log("HHHHHH " + computedStyles2.height + " " + item.id + " " + computedStyles2.flex);
       
-        console.log(square_touch);
+       // console.log(square_touch);
 
        })
     })
