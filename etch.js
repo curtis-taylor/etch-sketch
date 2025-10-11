@@ -11,7 +11,6 @@ function square_test(square_length) {
     }
 
     if(container.children.length < 1) {
-    
 
         for (let i = 0; i < (square_length * square_length); i++) {
             let square = document.createElement('div');
@@ -28,19 +27,18 @@ function square_test(square_length) {
             //square.style.setProperty('--grid-size', square_length);
             //square.style.flex = "0 0 calc(100% / square_length)"
            
-            let txt = "--grid-size: " + square_length + ";";
+            let new_grid_backcolor;
+
+            square_length < 30 ? new_grid_backcolor = 'white' : new_grid_backcolor = 'linen';
+
+            let txt = "background-color: " + new_grid_backcolor + "; --grid-size: " + square_length + ";";
 
             let txt2 = "--grid-size: " + square_length + " ;" + "height: " + (100 / square_length)  + "%; " + "flex: 0 0 " + (100 / square_length)  + "%;";
             
-            square.setAttribute("style", txt2);
+            square.setAttribute("style", txt);
             container.appendChild(square);
 
             let computedStyles = window.getComputedStyle(square);
-           // console.log('square ' + square_length * square_length);
-            console.log("Hi " + txt2);
-           // console.log(computedStyles.backgroundColor);
-           // console.log(txt)
-
            
         }
 
@@ -62,29 +60,25 @@ function colouring (square_length) {
         //e.stopPropagation();
         e.stopImmediatePropagation();
 
-         color_hex = getRandomHexColor();
-        // console.log(color_hex);
-        //console.log(e);
-
-        //console.log("**** " + `${square_length}`);
-        //console.log('Mouse is over:', item);
-
          if(!(item.id in square_touch)) {
             square_touch[item.id] = 1
             opacity_num = 0.1;
+            color_hex = getRandomHexColor(square_touch[item.id]);
 
         } else  {
             if(square_touch[item.id] < 10) {
                 square_touch[item.id] = square_touch[item.id] + 1;
                 opacity_num = square_touch[item.id] / 10;
+                 color_hex = getRandomHexColor(square_touch[item.id]);
                 //console.log(opacity_num);
             } else {
                 color_hex = '#000000'
             }
         }
 
-        let txt = 'background-color: ' + color_hex + ';' + '--grid-size: ' + square_length + ';' + 'opacity: ' + opacity_num + ";" + + "height: " + (100 / square_length)  + "%; " + "flex: 0 0 " + (100 / square_length)  + "%;";
+        let txt2 = 'background-color: ' + color_hex + ';' + '--grid-size: ' + square_length + ';' + 'opacity: ' + opacity_num + ";" + + "height: " + (100 / square_length)  + "%; " + "flex: 0 0 " + (100 / square_length)  + "%;";
 
+        let txt = 'background-color: ' + color_hex + ';' + '--grid-size: ' + square_length + ';' + 'opacity: ' + opacity_num + ";"
        // item.setAttribute('style', txt);
 
         /* item.style.height = `${height}`;
@@ -95,31 +89,17 @@ function colouring (square_length) {
 
        // let computedStyles2 = window.getComputedStyle(item);
 
-       
-
-        /*
-        let txt = "--grid-size: " + square_length + ";"; 
-       let h_text = "height: " + height + " ;";
-       // let f_text= "flex: 0 0 calc(%100 / var(" + square_length + "));";
-        item.setAttribute('style', txt);
-        item.setAttribute('style', h_text);
-       // item.setAttribute('style', h_text);
-       // item.setAttribute('style', f_text);
-                */
-
         item.setAttribute('style', txt);
 
-        //console.log("HHHHHH " + computedStyles2.height + " " + item.id + " " + computedStyles2.flex);
-      
-       // console.log(square_touch);
 
        })
     })
 
 }
 
-function getRandomHexColor() {
+function getRandomHexColor(insert_num) {
     const randomValue = Math.floor(Math.random() * 16777215); // 16777215 is 0xFFFFFF in decimal
-    const hexColor = '#' + randomValue.toString(16).padStart(6, '0');
+    let hexColor = '#' + randomValue.toString(16).padStart(6, '0');
+   
     return hexColor;
 }

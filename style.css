@@ -50,26 +50,27 @@ body {
     --grid-size: 4; / Default grid size can be set here /
 } */
 
-/*
+
 .square {
     /*
     height: calc(100% / 16);
     flex: 0 0 calc(100% / 16); 
-    
+    */
     --grid-size: 16;
     flex: 0 0 calc(100% / var(--grid-size));
     height: calc(100% / var(--grid-size)); 
-    background-color: white; 
-    border: 1px solid #999;
-
-} */
-
-
-.square {
-    background-color: white; 
+    background-color: li; 
     border: 1px solid #999;
 
 } 
+
+
+/*
+.square {
+    background-color: whitesmoke; 
+    border: 1px solid #999;
+
+} */
 
 /*
 .square:hover {
