@@ -10,6 +10,12 @@ body {
     align-items: center;
 } 
 
+h1 {
+    font-weight: bolder;
+    font-size: 40px;
+    font-family:Arial, Helvetica, sans-serif
+}
+
 .slider_container {
     margin-right: 40px;
     display: flex;
@@ -22,8 +28,8 @@ body {
 #grid_container {
     display: flex;
     flex-wrap: wrap;
-    width: 800px; /* Set fixed width */
-    height: 800px; /* Set fixed height for square shape */
+    width: 640px; /* Set fixed width */
+    height: 640px; /* Set fixed height for square shape */
     position: relative; /* Positioning for squared divs */
 }
 
@@ -59,7 +65,7 @@ body {
     --grid-size: 16;
     flex: 0 0 calc(100% / var(--grid-size));
     height: calc(100% / var(--grid-size)); 
-    background-color: li; 
+    background-color: white; 
     border: 1px solid #999;
 
 } 

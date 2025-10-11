@@ -29,7 +29,7 @@ function square_test(square_length) {
            
             let new_grid_backcolor;
 
-            square_length < 30 ? new_grid_backcolor = 'white' : new_grid_backcolor = 'linen';
+            square_length < 30 ? new_grid_backcolor = 'white' : new_grid_backcolor = 'lightgrey';
 
             let txt = "background-color: " + new_grid_backcolor + "; --grid-size: " + square_length + ";";
 
